@@ -95,7 +95,7 @@ public class LoginLogoutController {
 	 */
 	@RequestMapping(value = "/loginsuccess", method = RequestMethod.GET)
 	@ResponseBody
- 	public String handleLoginSuccess() throws JsonProcessingException {
+ 	public ResponseData handleLoginSuccess() throws JsonProcessingException {
 		logger.debug("Received request to show accept page");
 		
 		List<Map<String,String>> message=new ArrayList<Map<String,String>>();
@@ -107,7 +107,6 @@ public class LoginLogoutController {
 		message.add(msgmap);
 		data.setMessage(message);
 		data.setData(msgmap);
-		ObjectMapper mapper=new ObjectMapper();
-		return mapper.writeValueAsString(data);
+		return data;
 	}
 }

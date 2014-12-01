@@ -23,9 +23,9 @@ public class ResponseData {
 	public void setData(Map<String, String> data) {
 		this.data = data;
 	}
-	private String status;
-	private List<Map<String,String>> message;
-	private Map<String,String> data;
+	public String status;
+	public List<Map<String,String>> message;
+	public Map<String,String> data;
 	
 
 }
